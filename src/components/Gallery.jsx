@@ -12,7 +12,7 @@ function Gallery() {
 
     const fetchPhotos = async () => {
         try {
-            const response = await fetch('https://localhost:7221/Photos');
+            const response = await fetch('https://kobiandlina-weddingphotos.azurewebsites.net/Photos');
             if (response.ok) {
                 const data = await response.json();
                 const transformedData = data.map(photo => ({
@@ -35,7 +35,7 @@ function Gallery() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`https://localhost:7221/Photos/${id}`, {
+            const response = await fetch(`https://kobiandlina-weddingphotos.azurewebsites.net/${id}`, {
                 method: 'DELETE',
             });
 
